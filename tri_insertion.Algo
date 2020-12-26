@@ -1,0 +1,21 @@
+
+PROCEDURE Tri_insertion (var Tab:ARRAY_OF INTEGER) ;
+
+var i, j, v : INTEGER;
+begin
+  FOR i FROM 1 TO tab.length-1  STEP 1 DO
+  begin
+     v := Tab[ i ];
+     j := i ;
+    WHILE ( Tab[ j-1 ] > v) DO
+    begin
+         Tab[ j ] := Tab[ j-1 ] ;
+          j := j - 1 ;
+    END_WHILE
+    Tab[ j ] := v ;
+  END_FOR
+end;
+
+
+
+
